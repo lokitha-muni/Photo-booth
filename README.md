@@ -56,19 +56,9 @@ No installation required! This is a client-side web application that runs direct
 
 ## Screenshots
 
-*Add your screenshots here after taking them. Suggested screenshots:*
+![Screenshot 2025-07-09 124047](https://github.com/user-attachments/assets/73aebc21-bc82-4360-96f7-d925a04cca0d)
 
-1. Main interface with camera view
-2. Filter selection in action
-3. Countdown during photo capture
-4. Final photo strip result
-5. Examples of different filters applied
-
-*To add screenshots, save them in a `/screenshots` folder and reference them like:*
-
-```
-![Description](screenshots/screenshot1.png)
-```
+![photo-strip (4)](https://github.com/user-attachments/assets/37f83140-2e44-4c65-b7a9-c8e4f5ce1de5)
 
 ## Customization
 
