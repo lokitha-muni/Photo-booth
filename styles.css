@@ -1,0 +1,336 @@
+/* Base Styles */
+:root {
+    --primary-color: #a67c52; /* Warm brown */
+    --secondary-color: #d4b996; /* Light tan */
+    --accent-color: #e6ccb2; /* Soft beige */
+    --text-color: #3c2f2f; /* Dark brown */
+    --light-bg: #f7f3eb; /* Cream background */
+    --shadow: 0 4px 8px rgba(101, 67, 33, 0.15);
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(101, 67, 33, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .booth-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Camera Styles */
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+#camera {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: var(--border-radius);
+}
+
+/* Controls Styles */
+.controls {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    background-color: var(--light-bg);
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(101, 67, 33, 0.1);
+}
+
+.start-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.start-btn:hover {
+    background-color: #8d6a46; /* Darker brown on hover */
+    transform: translateY(-2px);
+}
+
+/* Result Styles */
+.result-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.photo-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.strip-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(101, 67, 33, 0.15);
+    border: 3px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+.photo-frame {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.photo-frame:last-of-type {
+    margin-bottom: 15px;
+}
+
+.photo-frame img {
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+}
+
+.date-stamp {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.result-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.download-btn, .new-session-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.new-session-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.download-btn:hover, .new-session-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Filter Classes for Video */
+.filter-grayscale {
+    filter: grayscale(100%);
+}
+
+.filter-sepia {
+    filter: sepia(70%);
+}
+
+.filter-vintage {
+    filter: sepia(30%) contrast(110%) brightness(110%) saturate(85%);
+}
+
+.filter-pastel {
+    filter: contrast(80%) brightness(120%) saturate(85%);
+}
+
+.filter-warm {
+    filter: sepia(20%) saturate(140%) brightness(110%) contrast(110%) hue-rotate(10deg);
+}
+
+.filter-cool {
+    filter: saturate(90%) brightness(105%) contrast(105%) hue-rotate(-10deg);
+}
+
+.filter-dramatic {
+    filter: contrast(140%) brightness(90%) saturate(110%);
+}
+
+.filter-retro {
+    filter: sepia(40%) saturate(120%) brightness(105%) contrast(120%) hue-rotate(-5deg);
+}
+
+.filter-polaroid {
+    filter: contrast(110%) brightness(115%) saturate(90%) sepia(10%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 10px solid white;
+    border-bottom: 40px solid white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .booth-container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for the flash effect */
+@keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
