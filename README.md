@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Vintage Photo Booth Web Application
 
 A browser-based photo booth application that uses your webcam to create classic photo strips with various filters and effects.
@@ -90,3 +91,7 @@ This project is open source and available under the MIT License.
 
 - Fonts: Google Fonts (Pacifico, Quicksand)
 - Created by: [Your Name]
+=======
+# Photo-booth
+A pastel-themed web photo booth app that captures 4 aesthetic webcam photos with filter options. It displays the date below each image and arranges them in a stylish layout. Users can download the final photo strip, making it a fun, creative, and cozy way to capture memories.
+>>>>>>> de874be76dd8c7448ff482f75e2814e75a238459
