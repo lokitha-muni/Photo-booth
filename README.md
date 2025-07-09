@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Vintage Photo Booth Web Application
 
 A browser-based photo booth application that uses your webcam to create classic photo strips with various filters and effects.
